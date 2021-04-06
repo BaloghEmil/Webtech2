@@ -1,0 +1,13 @@
+mat-form-field{
+  width: 100%;
+}
+
+mat-card:first-of-type{
+  text-align: center;
+  display: block;
+  margin: 2 2 auto;
+}
+
+mat-spinner{
+  margin: auto;
+}

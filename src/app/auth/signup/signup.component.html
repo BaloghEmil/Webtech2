@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title mat-card-title> Regisztráció </mat-card-title>
+</mat-card>
+<mat-card>
+  <!--<mat-spinner></mat-spinner>-->
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+    <mat-form-field>
+      <input matInput type="email" name="email" placeholder="E-mail" ngModel #emailInput="ngModel" required email>
+      <mat-error *ngIf="emailInput.invalid">Kérlek adj meg egy valós e-mailt</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required >
+      <mat-error *ngIf="passwordInput.invalid">Kérlek adj meg egy valós jelszót</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">Regisztráció</button>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </form>
+</mat-card>

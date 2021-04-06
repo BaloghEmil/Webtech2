@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-title mat-card-title> Új termék hozzáadása </mat-card-title>
+</mat-card>
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+       matInput
+       type="text"
+       name="title"
+       ngModel
+       required
+       minlength="3"
+       placeholder="Termék neve"
+       #title="ngModel"
+       >
+       <mat-error *ngIf="title.invalid">Kérlek add meg a termék nevét</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+       matInput
+       rows="6"
+       name="content"
+       ngModel
+       required
+       minlength="10"
+       placeholder="Termék leírása"
+       #content=ngModel
+       ></textarea>
+       <mat-error *ngIf="content.invalid">Kérlek add meg a termék leírását</mat-error>
+    </mat-form-field>
+    <button
+     mat-raised-button
+      color="accent"
+     type="submit">Mentés</button>
+  </form>
+  <span class="spacer"></span>
+<span ngModel #infoCreate *ngIf="itemAdded">Az új terméket sikeresen hozzáadta!</span>
+</mat-card>

@@ -1,0 +1,18 @@
+:host{
+  display: block;
+  margin-top: 1rem;
+}
+
+mat-card:first-of-type{
+  text-align: center;
+  display: block;
+}
+
+.spacer{
+  text-align: center;
+}
+
+mat-form-field,
+textarea{
+  width: 100%;
+}

@@ -1,0 +1,14 @@
+:host{
+  display: block;
+  margin-top: 1rem;
+}
+
+mat-card{
+  text-align: center;
+  display: block;
+  margin: 2 2 auto;
+}
+
+.info-text{
+  text-align: center;
+}
